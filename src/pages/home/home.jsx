@@ -1,5 +1,11 @@
 import "./home.css";
+import Header from "../../Header/Header";
 
-export default function home() {
-  return <div>home</div>;
+export default function Home() {
+  return (
+    <div className="home">
+      <Header />
+      homepage
+    </div>
+  );
 }
