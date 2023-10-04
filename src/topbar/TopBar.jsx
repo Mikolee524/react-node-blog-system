@@ -4,10 +4,10 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="fa-brands fa-square-facebook"></i>
-        <i className="fa-brands fa-square-twitter"></i>
-        <i className="fa-brands fa-square-github"></i>
-        <i className="fa-brands fa-square-instagram"></i>
+        <i className="topIcon fa-brands fa-square-facebook"></i>
+        <i className="topIcon fa-brands fa-square-twitter"></i>
+        <i className="topIcon fa-brands fa-square-github"></i>
+        <i className="topIcon fa-brands fa-square-instagram"></i>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -22,9 +22,9 @@ export default function TopBar() {
         <img
           className="topImg"
           src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg"
-          alt="topImg"
+          alt="avatar"
         />
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
   );
