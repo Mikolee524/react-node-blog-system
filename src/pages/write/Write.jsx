@@ -3,10 +3,15 @@ import "./write.css";
 export default function Write() {
   return (
     <div className="write">
+      <img
+        src="https://z1.ax1x.com/2023/10/06/pPXBA3j.jpg"
+        className="writeImg"
+        alt=""
+      />
       <form className="writeForm">
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
-            <i class="fa-solid fa-plus"></i>
+            <i className="writeIcon fa-solid fa-plus"></i>
           </label>
           <input type="file" id="fileInput" style={{ display: "none" }} />
           <input
@@ -23,7 +28,7 @@ export default function Write() {
             className="writeInput writeText"
           ></textarea>
         </div>
-        <button className="writeSumit">Publish</button>
+        <button className="writeSubmit">Publish</button>
       </form>
     </div>
   );
