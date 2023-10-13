@@ -32,11 +32,17 @@
 
 .settingsPP {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   margin: 10px 0;
 }
 
-.settingsPP > img {
+.settingsImg {
+  display: flex;
+  align-items: center;
+}
+
+.settingsImg > img {
   width: 70px;
   height: 70px;
   border-radius: 20px;
@@ -53,5 +59,31 @@
   align-items: center;
   justify-content: center;
   margin-left: 10px;
+  cursor: pointer;
+}
+
+.settingsForm > label,
+.settingsPP > label {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.settingsPP > input {
+  color: grey;
+  margin: 10px 0;
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.settingsSubmit {
+  width: 150px;
+  align-self: center;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  margin-top: 20px;
   cursor: pointer;
 }
