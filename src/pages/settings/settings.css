@@ -74,6 +74,7 @@
   height: 30px;
   border: none;
   border-bottom: 1px solid lightgray;
+  outline: none;
 }
 
 .settingsSubmit {
