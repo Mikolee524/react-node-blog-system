@@ -1,24 +1,16 @@
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./login.css";
-import { useRef } from "react";
 
 export default function Login() {
-  const userRef = useRef();
-  const passwordRef = useRef();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <div className="login">
       <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
+      <form className="loginForm">
+        <label>Email</label>
         <input
           type="text"
           className="loginInput"
-          placeholder="Enter your username..."
+          placeholder="Enter your email..."
         />
         <label>Password</label>
         <input
@@ -26,9 +18,7 @@ export default function Login() {
           className="loginInput"
           placeholder="Enter your password..."
         />
-        <button className="loginButton" type="submit">
-          Login
-        </button>
+        <button className="loginButton">Login</button>
       </form>
       <button className="loginRegisterButton">
         <Link className="link" to="/register">
