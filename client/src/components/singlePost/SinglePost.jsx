@@ -1,17 +1,28 @@
+import { useLocation } from "react-router-dom/cjs/react-router-dom.min";
 import "./singlePost.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function SinglePost() {
+  const location = useLocation();
+  const path = location.pathname.split("/")[2];
+  const [post, setPost] = useState({});
+
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data);
+    };
+    getPost();
+  }, [path]);
   return (
     <div className="singlePost">
-      SinglePost
       <div className="singlePostWrapper">
-        <img
-          src="https://z1.ax1x.com/2023/10/06/pPXBA3j.jpg"
-          alt="singlePostImg"
-          className="singlePostImg"
-        />
+        {post.photo && (
+          <img src={post.photo} alt="singlePostImg" className="singlePostImg" />
+        )}
         <h1 className="singlePostTitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {post.title}
           <div className="singlePostEdit">
             <i className="singlePostIcon fa-regular fa-pen-to-square"></i>
             <i className="singlePostIcon fa-regular fa-trash-can"></i>
@@ -19,23 +30,13 @@ export default function SinglePost() {
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
-            Autuor:<b>Michael</b>
+            Autuor:<b>{post.username}</b>
           </span>
-          <span className="singlePostDate">1 hour ago</span>
+          <span className="singlePostDate">
+            {new Date(post.createdAt).toDateString()}
+          </span>
         </div>
-        <p className="singlePostDesc">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, odit
-          voluptate neque consequuntur reprehenderit rem quae blanditiis optio
-          minus recusandae, omnis modi laudantium nobis voluptas et quo
-          adipisci, eius libero?Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Explicabo quibusdam dolorum quas rerum totam quasi
-          unde recusandae ad consectetur dignissimos numquam, nisi animi
-          perferendis quaerat nostrum at itaque temporibus cupiditate! Lorem,
-          ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit
-          exercitationem animi soluta, impedit aspernatur totam assumenda non
-          ipsum quam nostrum aliquam provident odio commodi dolores distinctio
-          recusandae quasi. Et.
-        </p>
+        <p className="singlePostDesc">{post.desc}</p>
       </div>
     </div>
   );
