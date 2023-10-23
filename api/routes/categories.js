@@ -14,6 +14,7 @@ router.post("/", async (req, res) => {
 
 //GET CAT
 router.get("/", async (req, res) => {
+  const catname = req.query.name;
   const newCat = new Category(req.body);
   try {
     const cats = await Category.find();
