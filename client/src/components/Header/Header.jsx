@@ -10,7 +10,7 @@ export default function Header() {
       <img
         className="headerImg"
         // src="https://z1.ax1x.com/2023/10/05/pPXSAlF.png"
-        src="./background.png"
+        src="images/background.png"
         alt="background"
       />
     </div>

@@ -17,7 +17,11 @@ export default function SideBar() {
     <div className="sidebar">
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT ME</span>
-        <img src="https://z1.ax1x.com/2023/10/05/pPX1dSO.png" alt="" />
+        <img
+          // src="https://z1.ax1x.com/2023/10/05/pPX1dSO.png"
+          src="/images/avatar.png"
+          alt="avatar"
+        />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
           corporis quod veniam illo explicabo magnam neque odio atque non

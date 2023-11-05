@@ -44,7 +44,8 @@ export default function TopBar() {
         {user ? (
           <img
             className="topImg"
-            src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg"
+            // src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg"
+            src="/images/miku_avatar.png"
             alt="avatar"
           />
         ) : (

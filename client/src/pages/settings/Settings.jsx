@@ -12,7 +12,11 @@ export default function Settings() {
         <form className="settingsForm">
           <label>Profile Picture</label>
           <div className="settingsImg">
-            <img src="https://z1.ax1x.com/2023/10/05/pPX1dSO.png" alt="" />
+            <img
+              // src="https://z1.ax1x.com/2023/10/05/pPX1dSO.png"
+              src="/images/avatar.png"
+              alt="avatar"
+            />
             <label htmlFor="fileInput">
               <i className="settingsPPIcon fa-regular fa-circle-user"></i>
             </label>
