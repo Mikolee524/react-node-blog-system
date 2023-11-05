@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../models/Users");
+const User = require("../models/User");
 const Post = require("../models/Post");
 const bcrypt = require("bcrypt");
 
@@ -57,4 +57,5 @@ router.get("/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 module.exports = router;
