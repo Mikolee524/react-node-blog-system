@@ -3,12 +3,7 @@ import "./write.css";
 export default function Write() {
   return (
     <div className="write">
-      <img
-        // src="https://z1.ax1x.com/2023/10/06/pPXBA3j.jpg"
-        src="/images/postCover.png"
-        className="writeImg"
-        alt=""
-      />
+      <img src="/images/postCover.jpeg" className="writeImg" alt="" />
       <form className="writeForm">
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
@@ -24,7 +19,7 @@ export default function Write() {
         </div>
         <div className="writeFormGroup">
           <textarea
-            placeholder="Tell your stort..."
+            placeholder="Tell your story..."
             type="text"
             className="writeInput writeText"
           ></textarea>
