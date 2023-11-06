@@ -22,7 +22,7 @@ function App() {
         <Route path="/register">{user ? <Home /> : <Register />}</Route>
         <Route path="/write">{user ? <Write /> : <Register />}</Route>
         <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
-        <Route path="/posts/:postId">
+        <Route path="/post/:postId">
           <Single />
         </Route>
       </Switch>
