@@ -6,7 +6,6 @@ import axios from "axios";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
-  console.log(location.pathname.split("/")[2]);
   const [post, setPost] = useState({});
 
   useEffect(() => {
@@ -32,7 +31,7 @@ export default function SinglePost() {
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
             <Link className="link" to={`/?user=${post.username}`}>
-              Autuor:<b>{post.username}</b>
+              Author:<b>{post.username}</b>
             </Link>
           </span>
           <span className="singlePostDate">

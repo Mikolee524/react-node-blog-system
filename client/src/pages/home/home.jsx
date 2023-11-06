@@ -1,7 +1,7 @@
 import "./home.css";
 import Header from "../../components/Header/Header";
 import Posts from "../../components/posts/Posts";
-import Sidebar from "../../components/sidebar/Sidebar";
+import Sidebar from "../../components/sidebar/Sidebar.jsx";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router";
