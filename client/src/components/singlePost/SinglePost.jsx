@@ -6,6 +6,7 @@ import axios from "axios";
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
+  console.log(location.pathname.split("/")[2]);
   const [post, setPost] = useState({});
 
   useEffect(() => {

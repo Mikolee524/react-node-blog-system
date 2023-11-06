@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import "./register.css";
 import { useState } from "react";
 import axios from "axios";
@@ -7,7 +7,7 @@ export default function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [err, setError] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,7 +19,7 @@ export default function Register() {
         password,
       });
       res.data && window.location.replace("/login");
-    } catch {
+    } catch (err) {
       setError(true);
     }
   };
@@ -27,7 +27,7 @@ export default function Register() {
     <div className="register">
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handleSubmit}>
-        <lable>Username</lable>
+        <label>Username</label>
         <input
           type="text"
           className="registerInput"
@@ -57,9 +57,9 @@ export default function Register() {
           Login
         </Link>
       </button>
-      {err && (
+      {error && (
         <span style={{ color: "red", marginTop: "10px" }}>
-          Someting went wrong!
+          Something went wrong!
         </span>
       )}
     </div>

@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 
-export default function SideBar() {
+export default function Sidebar() {
   const [cats, setCats] = useState([]);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function SideBar() {
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           {cats.map((c) => (
-            <Link className="link" to={`/?cat=${c.name}`}>
+            <Link to={`/?cat=${c.name}`} className="link">
               <li className="sidebarListItem">{c.name}</li>
             </Link>
           ))}

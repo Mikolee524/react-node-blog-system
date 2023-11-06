@@ -1,10 +1,10 @@
 import "./home.css";
 import Header from "../../components/Header/Header";
 import Posts from "../../components/posts/Posts";
-import SideBar from "../../components/siderbar/SideBar";
+import Sidebar from "../../components/sidebar/Sidebar";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 
 export default function Home() {
   const [posts, setPosts] = useState([]);
@@ -24,7 +24,7 @@ export default function Home() {
       <Header />
       <div className="home">
         <Posts posts={posts} />
-        <SideBar />
+        <Sidebar />
       </div>
     </>
   );
