@@ -1,13 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import "./singlePost.css";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { Context } from "../../context/Context";
 
 export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [post, setPost] = useState({});
   const PF = "http://localhost:4000/images/";
+  const { user } = useContext(Context);
 
   useEffect(() => {
     const getPost = async () => {
@@ -16,6 +18,12 @@ export default function SinglePost() {
     };
     getPost();
   }, [path]);
+
+  const handleDelete = async () => {
+    try {
+      await axios.delete("posts/");
+    } catch (err) {}
+  };
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
@@ -28,10 +36,16 @@ export default function SinglePost() {
         )}
         <h1 className="singlePostTitle">
           {post.title}
-          <div className="singlePostEdit">
-            <i className="singlePostIcon fa-regular fa-pen-to-square"></i>
-            <i className="singlePostIcon fa-regular fa-trash-can"></i>
-          </div>
+          {post.username === user?.username && (
+            // post edit buttons
+            <div className="singlePostEdit">
+              <i className="singlePostIcon fa-regular fa-pen-to-square"></i>
+              <i
+                className="singlePostIcon fa-regular fa-trash-can"
+                onClick={handleDelete}
+              ></i>
+            </div>
+          )}
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthor">
