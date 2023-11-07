@@ -25,16 +25,16 @@ export default function Write() {
       try {
         await axios.post("/upload", data);
       } catch (err) {}
-      try {
-        const res = await axios.post("/posts", newPost);
-        window.location.replace("post/" + res.data._id);
-      } catch (err) {}
     }
+    try {
+      const res = await axios.post("/posts", newPost);
+      window.location.replace("/post/" + res.data._id);
+    } catch (err) {}
   };
   return (
     <div className="write">
       {file && (
-        <img src={URL.createObjectURL(file)} className="writeImg" alt="" />
+        <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
       )}
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
