@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useContext, useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./login.css";
@@ -8,6 +8,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const [error, setError] = useState(false);
   // const user = JSON.parse(localStorage.getItem("user"));
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,6 +20,7 @@ export default function Login() {
       });
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
+      setError(true);
       dispatch({ type: "LOGIN_FAILURE" });
     }
   };
@@ -45,11 +47,19 @@ export default function Login() {
           Login
         </button>
       </form>
-      <button className="loginRegisterButton">
-        <Link className="link" to="/register">
-          Register
-        </Link>
-      </button>
+      <div className="loginTip">
+        Don't have account?
+        <button className="loginRegisterButton">
+          <Link className="link" to="/register">
+            Register
+          </Link>
+        </button>
+      </div>
+      {error && (
+        <span style={{ color: "red", marginTop: "10px" }}>
+          Wrong user name or password!
+        </span>
+      )}
     </div>
   );
 }

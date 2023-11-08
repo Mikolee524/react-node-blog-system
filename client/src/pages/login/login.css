@@ -50,10 +50,18 @@
   background-color: rgb(252, 173, 173);
 }
 
-.loginRegisterButton {
+.loginTip {
+  font-family: "Josefin Sans", sans-serif;
   position: absolute;
   top: 60px;
   right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginRegisterButton {
+  margin-left: 20px;
   background-color: teal;
   cursor: pointer;
   border: none;
