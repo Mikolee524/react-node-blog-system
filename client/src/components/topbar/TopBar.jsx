@@ -5,7 +5,7 @@ import { Context } from "../../context/Context";
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
-  const PF = "http://localhost:4000/images";
+  const PF = "http://localhost:4000/images/";
 
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
@@ -13,10 +13,22 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fa-brands fa-square-facebook"></i>
-        <i className="topIcon fa-brands fa-square-twitter"></i>
-        <i className="topIcon fa-brands fa-square-github"></i>
-        <i className="topIcon fa-brands fa-square-instagram"></i>
+        <a
+          className="socialLink"
+          href="https://twitter.com/michael_li524"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="topIcon fa-brands fa-square-twitter"></i>
+        </a>
+        <a
+          className="socialLink"
+          href="https://github.com/michaeli524"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="topIcon fa-brands fa-square-github"></i>
+        </a>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -48,12 +60,16 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
+            {/* {user.profilePic === "" ? (
+              <i className="fa-solid fa-user"></i>
+            ) : ( */}
             <img
               className="topImg"
               // src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg" src="/images/miku_avatar.jpg"
               src={PF + user.profilePic}
               alt="avatar"
             />
+            {/* )} */}
           </Link>
         ) : (
           <ul className="topList">
@@ -69,7 +85,7 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        {/* <i className="topSearchIcon fa-solid fa-magnifying-glass"></i> */}
       </div>
     </div>
   );

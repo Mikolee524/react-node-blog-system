@@ -40,10 +40,22 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
-          <i className="sidebarIcon fa-brands fa-square-facebook"></i>
-          <i className="sidebarIcon fa-brands fa-square-twitter"></i>
-          <i className="sidebarIcon fa-brands fa-square-github"></i>
-          <i className="sidebarIcon fa-brands fa-square-instagram"></i>
+          <a
+            className="socialLink"
+            href="https://twitter.com/michael_li524"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="sidebarIcon fa-brands fa-square-twitter"></i>
+          </a>
+          <a
+            className="socialLink"
+            href="https://github.com/michaeli524"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="sidebarIcon fa-brands fa-square-github"></i>
+          </a>
         </div>
       </div>
     </div>

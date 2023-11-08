@@ -58,3 +58,8 @@
   cursor: pointer;
   margin-left: 15px;
 }
+
+.socialLink {
+  text-decoration: none;
+  color: #444444;
+}
