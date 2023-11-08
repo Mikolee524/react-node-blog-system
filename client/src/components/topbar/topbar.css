@@ -37,6 +37,22 @@
   cursor: pointer;
 }
 
+.defaultTopImg {
+  color: black;
+  padding: 10px 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.topUsername {
+  color: black;
+  margin-left: 10px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
 .topList {
   display: flex;
   justify-content: center;
@@ -52,12 +68,12 @@
   cursor: pointer;
 }
 
-.topSearchIcon {
+/* .topSearchIcon {
   font-size: 18px;
   color: #666;
   cursor: pointer;
   margin-left: 15px;
-}
+} */
 
 .socialLink {
   text-decoration: none;

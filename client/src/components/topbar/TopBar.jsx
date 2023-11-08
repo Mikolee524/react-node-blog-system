@@ -60,16 +60,18 @@ export default function TopBar() {
       <div className="topRight">
         {user ? (
           <Link to="/settings">
-            {/* {user.profilePic === "" ? (
-              <i className="fa-solid fa-user"></i>
-            ) : ( */}
-            <img
-              className="topImg"
-              // src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg" src="/images/miku_avatar.jpg"
-              src={PF + user.profilePic}
-              alt="avatar"
-            />
-            {/* )} */}
+            {user.profilePic === "" ? (
+              <i className="defaultTopImg fa-solid fa-user"></i>
+            ) : (
+              <img
+                className="topImg"
+                // src="https://z1.ax1x.com/2023/10/04/pPONoSx.jpg" src="/images/miku_avatar.jpg"
+                src={PF + user.profilePic}
+                title="User Setting"
+                alt="avatar"
+              />
+            )}
+            <span className="topUsername">{user.username}</span>
           </Link>
         ) : (
           <ul className="topList">
