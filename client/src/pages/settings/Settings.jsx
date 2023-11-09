@@ -95,17 +95,9 @@ export default function Settings() {
             <button className="settingsSubmit" type="submit">
               Update
             </button>
-            {success && (
-              <span
-                style={{
-                  color: "green",
-                  textAlign: "center",
-                  marginTop: "20px",
-                }}
-              >
-                Profile has been updated
-              </span>
-            )}
+            {success &&
+              window.location.replace("/") &&
+              alert("Profile has been updated")}
           </div>
         </form>
       </div>

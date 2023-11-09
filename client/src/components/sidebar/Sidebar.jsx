@@ -23,8 +23,21 @@ export default function Sidebar() {
           alt="avatar"
         />
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-          corporis quod veniam illo explicabo magnam neque odio atque non
+          This is a blog system made with React, Node.js, and MongoDB. Check it
+          on&nbsp;
+          <a
+            href="https://github.com/michaeli524/react-node-blog-system"
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: "inline-block",
+              color: "black",
+              "text-decoration": "underline",
+            }}
+          >
+            Github
+          </a>
+          .
         </p>
       </div>
       <div className="sidebarItem">
