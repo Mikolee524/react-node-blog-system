@@ -27,7 +27,9 @@
 
 进入目录
 
-### `cd react-node-blog-system`
+```sh
+> cd react-node-blog-system
+```
 
 ### 分别安装、启动前后端
 
