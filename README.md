@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# React-Node Blog System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+此项目是一个全栈项目，仓库内包含前端：/client 后端：/api
+
+部署在 Vercel，[React-Node-Blog-System](https://react-node-blog-system.project.mikolee.xyz/)
+
+##  使用的技术框架
+
+### 前端
+
++ React
++ Create-React-App
++ 
 
 ## Available Scripts
 
